@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:cubit_json/models/todo_model.dart';
-import 'package:cubit_json/repository/api_repository.dart';
 import 'package:flutter/widgets.dart';
-import 'package:meta/meta.dart';
+
+import '../../models/todo_model.dart';
+import '../../repository/api_repository.dart';
 
 part 'fetch_todo_state.dart';
 
