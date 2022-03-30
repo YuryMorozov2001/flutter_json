@@ -18,4 +18,16 @@ class FetchTodoCubit extends Cubit<FetchTodoState> {
       debugPrint('error' + e.toString());
     }
   }
+
+  Future<void> fetchNotCompletedTodoApi() async {
+    emit(FetchTodoLoading());
+    try {
+      final List<Todo>? todoList =
+          await apiRepository.getTodoNotCompletedList();
+
+      emit(FetchTodoLoaded(todoList: todoList ?? []));
+    } catch (e) {
+      debugPrint('error1' + e.toString());
+    }
+  }
 }
